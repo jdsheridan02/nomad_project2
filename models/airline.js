@@ -2,6 +2,13 @@
 // Initial table, will need to separated data into 3 tables further down the road.
 module.exports = function (sequelize, DataTypes) {
     var Nomad = sequelize.define("Nomad", {
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate:{
+                len:[1]
+            }
+        },
         airline: {
             type: DataTypes.STRING,
             allowNull: false,
