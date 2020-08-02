@@ -6,10 +6,19 @@ body {
   background: linear-gradient(90deg, rgba(31,164,161,1) 0%, rgba(53,175,177,1) 33%, rgba(93,194,208,1) 100%);
 }
 
+/* header */
+.header-container {
+  background-image: 
+}
+
 /* nav */
 .navbar {
   justify-content: center;
   padding: 1em;
+}
+
+.navbar-brand img {
+  margin: 0;
 }
 
 /* forms */
