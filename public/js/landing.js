@@ -1,6 +1,6 @@
 $(document).ready(() => {
   // Getting references to our form and input
-  const signUpForm = $("form.signup");
+  const signUpForm = $(".signup");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
 
@@ -29,11 +29,11 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
-        window.location.replace("/login");
+        window.location.replace("./login");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
-      .catch(handleLoginErr);
-  }
+      // .catch(handleLoginErr);
+  };
 
   function handleLoginErr(err) {
     $("#alert .msg").text(err.responseJSON);
