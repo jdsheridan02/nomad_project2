@@ -1,7 +1,7 @@
 
 // Initial table, will need to separated data into 3 tables further down the road.
 module.exports = function (sequelize, DataTypes) {
-    var Airline = sequelize.define("airline", {
+    var airline = sequelize.define("airline", {
         //columns for table airline 
         airline: {
             type: DataTypes.STRING,
@@ -11,14 +11,14 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         departureTime: {
-            type: DataTypes.INTEGAR,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
         boardingTime: {
-            type: DataTypes.INTEGAR,
+            type: DataTypes.STRING,
             allowNull: false,
             len: [1]
         },
@@ -44,5 +44,5 @@ module.exports = function (sequelize, DataTypes) {
     //     });
     // };
 
-    return Nomad;
+    return airline;
 };
