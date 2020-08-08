@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/airline", function(req, res) {
+  app.get("/api/index", function(req, res) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
@@ -12,7 +12,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/airline/:id", function(req, res) {
+  app.get("/api/add/:id", function(req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
@@ -26,9 +26,8 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/index", function(req, res) {
-    db.airline.create(req.body).then(function(dbairline) {
-        db.airline.create({
+  app.post("/api/add", function(req, res) {
+    db.airline.create({
             airline: req.body.airline,
             departureTime: req.body.departureTime,
             boardingTime: req.body.boardingTime,

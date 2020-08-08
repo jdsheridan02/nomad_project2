@@ -11,14 +11,14 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         departureTime: {
-            type: DataTypes.INTEGAR,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
         boardingTime: {
-            type: DataTypes.INTEGAR,
+            type: DataTypes.STRING,
             allowNull: false,
             len: [1]
         },
@@ -44,5 +44,5 @@ module.exports = function (sequelize, DataTypes) {
     //     });
     // };
 
-    return Nomad;
+    return Airline;
 };

@@ -1,6 +1,6 @@
 <div class="container-fluid header-container-4">    
-    <div><a class="navbar-brand justify-content-sm-start" href="/logout">
-      Logout
+    <div><a class="navbar-brand justify-content-sm-start" href="/index">
+      View Trip
     </a>  
   </div>
   <nav class="navbar navbar-light bg-light">
@@ -17,7 +17,7 @@
       <!-- airline info -->
       <h2><i class="fas fa-plane-departure"></i>&nbsp; Airline Info</h2>
       <hr>
-      <form>
+      <form method="POST" role="form">
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="airline-name">Airline Name</label>
@@ -42,13 +42,13 @@
             <input type="text" class="form-control" placeholder="1A"id="seat-assignment">
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="airlineBtn" class="btn btn-primary">Submit</button>
       </form>
       <!-- end airline info -->
       <!-- hotel info -->
       <h2><i class="fas fa-hotel"></i>&nbsp; Hotel Info</h2>
       <hr>
-        <form>
+        <form method="POST" role="form">
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="hotel-name">Hotel Name</label>
@@ -69,7 +69,7 @@
               <input type="date" class="form-control" id="check-out-date">
             </div>
         <!-- end hotel info -->
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" id="hotelBtn" class="btn btn-primary">Submit</button>
   </form>
 <!-- points of interest -->
 <h2><i class="fas fa-map-marked-alt"></i></i>&nbsp; Points of Interest</h2>
@@ -87,3 +87,5 @@
 </div>
 </div>
 </div>
+
+<script src="/assets/js/add.js"></script>
