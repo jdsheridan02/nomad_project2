@@ -1,38 +1,57 @@
-<h1>Cats!</h1>
-
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+<div class="container-fluid header-container-4">    
+    <div><a class="navbar-brand justify-content-sm-start" href="/logout">
+      Logout
+    </a>  
   </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-header" href="#">
+      <img src="assets/img/nomad-logo-white.png" width="200px" alt="Nomad Logo">
+    </a>
+  </nav>
+ 
+</div>
+<div class="container form-container">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2><i class="fas fa-plane-departure"></i>&nbsp; Airline Info</h2>
+    <ul>
+      {{#each airline}}
+          <li>
+            {{this.airline_name}}
+          </li>
+          <li>
+            {{this.boarding_time}}
+          </li>
+          <li>
+            {{this.departure_gate}}
+          </li>
+          <li>
+            {{this.seat_assignment}}
+          </li>
+      {{/each}}
+    </ul>
   </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2><i class="fas fa-hotel"></i>&nbsp; Hotel Info</h2>
+    <ul>
+      {{#each hotel}}
+          <li>
+            {{this.hotel_name}}
+          </li>
+          <li>
+            {{this.hotel_address}}
+          </li>
+          <li>
+            {{this.checkin_date}}
+          </li>
+          <li>
+            {{this.checkout_date}}
+          </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
 
-  <button type="submit">Add Cat</button>
-</form>
+</div> 

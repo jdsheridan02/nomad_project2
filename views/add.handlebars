@@ -1,75 +1,89 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Nomad - Express</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-</head>
-
-<body>
-
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Nomad</h1>
-      <h3>your one stop for travel organization</h3>
-      <hr>
-      <!-- <a href="/" class="btn btn-danger btn-lg">
-        <span class="fa fa-eye"></span> Search travel plans</a>
-      <a href="/all" class="btn btn-danger btn-lg">
-        <span class="fa fa-th-list"></span> All Characters</a> -->
+<div class="container-fluid header-container-4">    
+    <div><a class="navbar-brand justify-content-sm-start" href="/logout">
+      Logout
+    </a>  
+  </div>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-header" href="#">
+      <img src="assets/img/nomad-logo-white.png" width="200px" alt="Nomad Logo">
+    </a>
+  </nav>
+      <img src="assets/img/trip-info.png" width="350px" alt="Sign-up text" class="header-bg-3">  
     </div>
-    <div class="row">
-
-      <div class="col-lg-12">
-
-        <div class="card">
-          <div class="card-header">
-            Add Travel Info
-          </div>
-          <div class="card-body">
-            <form action="" method="POST" role="form">
-
-              <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="">Airline</label>
-                <input type="text" class="form-control" id="airline" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="">Hotel</label>
-                <input type="text" class="form-control" id="hotel" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="">Point of Interest</label>
-                <input type="text" class="form-control" id="point-of-interest" placeholder="">
-              </div>
-
-            </form>
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-                <span class="fa fa-fire"></span>Add to your travel log </button>
-            </div>
+    <!-- main section start -->
+<div class="container form-container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <!-- airline info -->
+      <h2><i class="fas fa-plane-departure"></i>&nbsp; Airline Info</h2>
+      <hr>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="airline-name">Airline Name</label>
+            <input type="text" class="form-control" id="airline-name" placeholder="Airline Name">
           </div>
         </div>
+        <div class="form-group col-md-6">
+          <label for="departure-time">Departure Time</label>
+          <input type="time" class="form-control" id="departure-time" placeholder="7:45 AM">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="boarding-time">Boarding Time</label>
+          <input type="time" class="form-control" id="boarding-time" placeholder="7:05 AM">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="depature-gate">Departure Gate</label>
+            <input type="text" class="form-control" placeholder="14C"id="depature-gate">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="seat-assignment">Seat Assignment</label>
+            <input type="text" class="form-control" placeholder="1A"id="seat-assignment">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <!-- end airline info -->
+      <!-- hotel info -->
+      <h2><i class="fas fa-hotel"></i>&nbsp; Hotel Info</h2>
+      <hr>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="hotel-name">Hotel Name</label>
+              <input type="text" class="form-control" id="hotel-name" placeholder="Hotel Name">
+            </div>
+          </div>
+          <div class="form-group col-md-12">
+            <label for="hotel-address">Hotel Address</label>
+            <input type="text" class="form-control" id="hotel-address" placeholder="1234 Main Street, Springfield NC 28202">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="check-in-date">Check-in Date</label>
+            <input type="date" class="form-control" id="check-in-date">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="check-out-date">Check-out Date</label>
+              <input type="date" class="form-control" id="check-out-date">
+            </div>
+        <!-- end hotel info -->
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+<!-- points of interest -->
+<h2><i class="fas fa-map-marked-alt"></i></i>&nbsp; Points of Interest</h2>
+<hr>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="points-of-interest">Points of Interest</label>
+        <!-- <input type="textarea" class="form-control" id="points-of-interest" placeholder="&#9679 Tokyo Skytree" rows="3" > -->
+        <textarea class="form-control" id="points-of-interest" rows="3" placeholder="&#9679 Tokyo Skytree"></textarea>
 
       </div>
     </div>
-  </div>
 
-  <script src="js/add.js" type="text/javascript"></script>
-
-</body>
-
-</html>
+</div>
+</div>
+</div>
