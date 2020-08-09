@@ -33,7 +33,7 @@ $(document).ready(() => {
     })
       .then(() => {
         console.log("made it to 32")
-        window.location.replace("/add");
+        window.location.replace("/user");
         // If there's an error, log the error
       })
       .catch(err => {
