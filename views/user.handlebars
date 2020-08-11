@@ -1,16 +1,16 @@
-<div class="container-fluid header-container-4">    
-    <div><a class="navbar-brand justify-content-sm-start" href="./index">
+<div class="container-fluid header-container-4">
+  <div><a class="navbar-brand justify-content-sm-start" href="./index">
       View Trip
-    </a>  
+    </a>
   </div>
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-header" href="#">
       <img src="assets/img/nomad-logo-white.png" width="200px" alt="Nomad Logo">
     </a>
   </nav>
-      <img src="assets/img/trip-info.png" width="350px" alt="Sign-up text" class="header-bg-3">  
-    </div>
-    <!-- main section start -->
+  <img src="assets/img/trip-info.png" width="350px" alt="Sign-up text" class="header-bg-3">
+</div>
+<!-- main section start -->
 <div class="container form-container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -35,11 +35,11 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="depature-gate">Departure Gate</label>
-            <input type="text" class="form-control" placeholder="14C"id="depature-gate">
+            <input type="text" class="form-control" placeholder="14C" id="depature-gate">
           </div>
           <div class="form-group col-md-6">
             <label for="seat-assignment">Seat Assignment</label>
-            <input type="text" class="form-control" placeholder="1A"id="seat-assignment">
+            <input type="text" class="form-control" placeholder="1A" id="seat-assignment">
           </div>
         </div>
         <button type="submit" id="airlineBtn" class="btn btn-primary">Submit</button>
@@ -48,44 +48,39 @@
       <!-- hotel info -->
       <h2><i class="fas fa-hotel"></i>&nbsp; Hotel Info</h2>
       <hr>
-        <form method="POST" role="form">
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <label for="hotel-name">Hotel Name</label>
-              <input type="text" class="form-control" id="hotel-name" placeholder="Hotel Name">
-            </div>
-          </div>
+      <form method="POST" role="form">
+        <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="hotel-address">Hotel Address</label>
-            <input type="text" class="form-control" id="hotel-address" placeholder="1234 Main Street, Springfield NC 28202">
+            <label for="hotel-name">Hotel Name</label>
+            <input type="text" class="form-control" id="hotel-name" placeholder="Hotel Name">
           </div>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="hotel-address">Hotel Address</label>
+          <input type="text" class="form-control" id="hotel-address"
+            placeholder="1234 Main Street, Springfield NC 28202">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="check-in-date">Check-in Date</label>
+          <input type="date" class="form-control" id="check-in-date">
+        </div>
+        <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="check-in-date">Check-in Date</label>
-            <input type="date" class="form-control" id="check-in-date">
+            <label for="check-out-date">Check-out Date</label>
+            <input type="date" class="form-control" id="check-out-date">
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="check-out-date">Check-out Date</label>
-              <input type="date" class="form-control" id="check-out-date">
-            </div>
-        <!-- end hotel info -->
-  <button type="submit" id="hotelBtn" class="btn btn-primary">Submit</button>
-  </form>
-<!-- points of interest -->
-<h2><i class="fas fa-map-marked-alt"></i></i>&nbsp; Points of Interest</h2>
-<hr>
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="points-of-interest">Points of Interest</label>
-        <!-- <input type="textarea" class="form-control" id="points-of-interest" placeholder="&#9679 Tokyo Skytree" rows="3" > -->
-        <textarea class="form-control" id="points-of-interest" rows="3" placeholder="&#9679 Tokyo Skytree"></textarea>
+          <!-- end hotel info -->
+          <button type="submit" id="hotelBtn" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div>
 
       </div>
+      <a class="navbar-brand justify-content-sm-start" href="./index"> 
+        View Trip Details
+      </a>
     </div>
-
-</div>
-</div>
+  </div>
 </div>
 
 <script src="./js/user.js"></script>
