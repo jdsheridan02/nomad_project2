@@ -3,7 +3,7 @@
 module.exports = function (sequelize, DataTypes) {
     var Airline = sequelize.define("airline", {
         //columns for table airline 
-        airline: {
+        airlineName: {
             type: DataTypes.STRING,
             allowNull: false,
             validate:{
@@ -34,15 +34,15 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    // Post.associate = function (models) {
-    //     // We're saying that a Post should belong to an Author
-    //     // A Post can't be created without an Author due to the foreign key constraint
-    //     Post.belongsTo(models.Author, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
+    Airline.associate = function (models) {
+        // We're saying that a Post should belong to an Author
+        // A Post can't be created without an Author due to the foreign key constraint
+        Airline.belongsTo(models.User, {
+            foreignKey: {
+              allowNull: false
+            }
+          });
+    };
 
     return Airline;
 };

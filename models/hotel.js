@@ -26,12 +26,14 @@ module.exports = function (sequelize, DataTypes) {
 
     });
 
-    // Hotel.associate = function (models) {
-    //     // Associating Hotel with User, to show only hotel information for specific user.
-    //     Hotel.hasMany(models.User, {
-    //         onDelete: "cascade"
-    //     });
-    // };
+    Hotel.associate = function (models) {
+        // Associating Hotel with User, to show only hotel information for specific user.
+        Hotel.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
 
     return Hotel;
 };

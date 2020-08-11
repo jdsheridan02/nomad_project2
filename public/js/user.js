@@ -1,13 +1,18 @@
-// Code here takes user input and post info into database to be recalled on index page.
+$(document).ready(function () {
+  // Code here takes user input and post info into database to be recalled on index page.
 
-// when user clicks add-btn
-$("#airlineBtn").on("click", function(event) {
+  $(document).on("click", "#airlineBtn", airlineInfo);
+  $(document).on("click", "#hotelBtn", hotelInfo);
+
+  // when user clicks add-btn
+  function airlineInfo(event) {
     event.preventDefault();
-  
+
+    console.log("storing airline info")
     // make a airline obj
     var airlineEntry = {
       // name from name input
-      airline: $("#airline-name").val().trim(),
+      airlineName: $("#airline-name").val().trim(),
       // departure time
       departureTime: $("#departure-time").val().trim(),
       // boarding time
@@ -17,28 +22,22 @@ $("#airlineBtn").on("click", function(event) {
       // seat assignment
       seatAssignment: $("#seat-assignment").val().trim()
     };
-  
+
     // send an AJAX POST-request with jQuery
-    $.post("/api/user", airlineEntry)
+    $.post("/api/airline", airlineEntry)
       // on success, run this callback
       .then(function(data) {
         // log the data we found
         console.log(data);
         // tell the user we're adding hotel
-        console.log("Adding airline info...");
+        console.log("****");
       });
-  
-    // // empty each input box by replacing the value with an empty string
-    // $("#name").val("");
-    // $("#airline").val("");
-    // $("#hotel").val("");
-    // $("#point-of-interest").val("");
-  
-  });
-  
-  $("#hotelBtn").on("click", function(event) {
+
+  };
+
+  function hotelInfo(event) {
     event.preventDefault();
-  
+
     // make a hotel obj
     var hotelEntry = {
       // name from name input
@@ -50,21 +49,30 @@ $("#airlineBtn").on("click", function(event) {
       // checkout date
       checkout: $("#check-out-date").val().trim()
     };
-  
+
     // send an AJAX POST-request with jQuery
-    $.post("/api/user", hotelEntry)
+    $.post("/api/hotel", hotelEntry)
       // on success, run this callback
-      .then(function(data) {
+      .then(function (data) {
         // log the data we found
         console.log(data);
         // tell the user we're adding a character with an alert window
         console.log("Adding hotel info...");
       });
-  
-    // // empty each input box by replacing the value with an empty string
-    // $("#name").val("");
-    // $("#airline").val("");
-    // $("#hotel").val("");
-    // $("#point-of-interest").val("");
-  
-  });
+
+    // // A function for rendering the list of authors to the page
+    // function renderAirline(rows) {
+    //   authorList.children().not(":last").remove();
+    //   authorContainer.children(".alert").remove();
+    //   if (rows.length) {
+    //     console.log(rows);
+    //     authorList.prepend(rows);
+    //   }
+    //   else {
+    //     renderEmpty();
+    //   }
+    // }
+
+  };
+
+});
