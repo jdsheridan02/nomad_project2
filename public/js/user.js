@@ -1,8 +1,8 @@
 $(document).ready(function () {
   // Code here takes user input and post info into database to be recalled on index page.
 
-  $(document).on("click", "#airlineBtn", airlineInfo);
-  $(document).on("click", "#hotelBtn", hotelInfo);
+  $(".airlineInfo").on("click", "#airlineBtn", airlineInfo);
+  $(".hotelInfo").on("click", "#hotelBtn", hotelInfo);
 
   // when user clicks add-btn
   function airlineInfo(event) {
@@ -49,9 +49,9 @@ $(document).ready(function () {
       // checkout date
       checkout: $("#check-out-date").val().trim()
     };
-
+      console.log("posting hotel info to DB");
     // send an AJAX POST-request with jQuery
-    $.post("/api/index", hotelEntry)
+    $.post("/api/index/hotel", hotelEntry)
       // on success, run this callback
       .then(function (data) {
         // log the data we found
