@@ -4,7 +4,9 @@ const express = require("express"),
   // Requiring passport as we've configured it
       passport = require("./config/passport"),
   // Set Handlebars.
-      exphbs = require("express-handlebars");
+      Handlebars = require("handlebars");
+      exphbs = require("express-handlebars"),
+      {allowInsecurePrototypeAccess} = require("@handlebars/allow-prototype-access")
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
@@ -15,7 +17,9 @@ const db = require("./models");
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 // handlebars stuff
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({
+  handlebars: allowInsecurePrototypeAccess(Handlebars)
+}));
 app.set("view engine", "handlebars");
 
 app.use(express.urlencoded({ extended: true }));

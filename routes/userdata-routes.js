@@ -17,7 +17,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/hotel", function (req, res) {
+  app.post("/api/index", function (req, res) {
     db.Hotel.create({
       UserId: req.user.id,
       name: req.body.name,
