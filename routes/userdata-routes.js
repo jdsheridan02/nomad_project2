@@ -5,7 +5,7 @@ module.exports = function (app) {
 
   app.post("/api/index", function (req, res) { 
     console.log(req.user);
-    db.airline.create({
+    db.Airline.create({
       UserId: req.user.id,
       airlineName: req.body.airlineName,
       departureTime: req.body.departureTime,
@@ -17,7 +17,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/index", function (req, res) {
+  app.post("/api/index/hotel", function (req, res) {
     console.log("pull hotel info");
     db.Hotel.create({
       UserId: req.user.id,

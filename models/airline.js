@@ -1,7 +1,7 @@
 
 // Initial table, will need to separated data into 3 tables further down the road.
 module.exports = function (sequelize, DataTypes) {
-    var Airline = sequelize.define("airline", {
+    var Airline = sequelize.define("Airline", {
         //columns for table airline 
         airlineName: {
             type: DataTypes.STRING,
