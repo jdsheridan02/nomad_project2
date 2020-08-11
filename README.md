@@ -1,22 +1,16 @@
-# project2-working_title-
+# Project 2
 
-## Project title: Nomad 
+## Nomad App
 ​
-Project desciption - Traveler itinerary, reminds users of key pieces of information regarding their travel plans (airline, gates, hotel accommodations, etc). As well as, create daily itinerary to visit key point of interests or eat at well known restaurants, cafes, or food carts. 
+Nomad is a travel planning app that allows users to gather all of their travel information in one place. Keeping track of airline, hotel, and in the future, itinerary information (and beyond). 
 ​​
-APIs - moments
+### Prerequisites
 
-What kind of data we will be managing - User Input Airline Info, User Input hotel accomodations, schedule, dates, points of interest, transportation(user provided or API?)
+```
+Express, Express-session, Passport, Express-handlebars, Sequelize, Nodemailer
 
-New library, package, or technology we will be using - Passport, NodeMailer, and possibly Hapi
-​
+```
 
-Team Members/Rough break down of tasks: 
+### Collaborators
 
-Jennifer - Front End work, page layout, UI . . .
-
-Justin - Back End, database creation . . .
-
-David - Back End, database creation, linking database to UI . . .
-
-Adia - TBD 
+David, Jennifer, Justin, Adia
