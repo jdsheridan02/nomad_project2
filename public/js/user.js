@@ -51,7 +51,7 @@ $(document).ready(function () {
     };
 
     // send an AJAX POST-request with jQuery
-    $.post("/api/hotel", hotelEntry)
+    $.post("/api/index", hotelEntry)
       // on success, run this callback
       .then(function (data) {
         // log the data we found

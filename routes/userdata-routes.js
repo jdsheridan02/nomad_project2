@@ -18,6 +18,7 @@ module.exports = function (app) {
   });
 
   app.post("/api/index", function (req, res) {
+    console.log("pull hotel info");
     db.Hotel.create({
       UserId: req.user.id,
       name: req.body.name,
