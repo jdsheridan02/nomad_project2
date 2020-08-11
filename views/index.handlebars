@@ -10,7 +10,7 @@
   </nav>
 
 </div>
-<div class="container form-container">
+{{!-- <div class="container form-container"> --}}
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h2><i class="fas fa-plane-departure"></i>&nbsp; Airline Info</h2>
@@ -33,32 +33,32 @@
     </div>
   </div>
 
-</div>
+{{!-- </div> --}}
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <h2><i class="fas fa-hotel"></i>&nbsp; Hotel Info</h2>
     <ul>
       {{#each hotel}}
-          <li>
-            Hotel Name: {{name}}
-          </li>
-          <li>
-            Hotel Address: {{address}}
-          </li>
-          <li>
-            Check-in: {{checkin}}
-          </li>
-          <li>
-            Check-out: {{checkout}}
-          </li>
+      <li>
+        Hotel Name: {{name}}
+      </li>
+      <li>
+        Hotel Address: {{address}}
+      </li>
+      <li>
+        Check-in: {{checkin}}
+      </li>
+      <li>
+        Check-out: {{checkout}}
+      </li>
       {{/each}}
     </ul>
-
   </div>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h4>You've got mail!</h4>
-        <p>We've got you covered. We've sent a copy of this page to your email!</p>
-      </div>
-    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h4>You've got mail!</h4>
+    <p>We've got you covered. We've sent a copy of this page to your email!</p>
+  </div>
 </div>
