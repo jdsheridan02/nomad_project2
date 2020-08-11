@@ -1,57 +1,63 @@
-<div class="container-fluid header-container-4">    
-    <div><a class="navbar-brand justify-content-sm-start" href="/logout">
+<div class="container-fluid header-container-4">
+  <div><a class="navbar-brand justify-content-sm-start" href="/logout">
       Logout
-    </a>  
+    </a>
   </div>
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-header" href="#">
       <img src="assets/img/nomad-logo-white.png" width="200px" alt="Nomad Logo">
     </a>
   </nav>
- 
+
 </div>
 <div class="container form-container">
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h2><i class="fas fa-plane-departure"></i>&nbsp; Airline Info</h2>
-    <ul>
-      {{#each airline}}
-          <li>
-            Airline: {{airlineName}}
-          </li>
-          <li>
-            Boarding Time: {{boardingTime}}
-          </li>
-          <li>
-            Departure Gate: {{departureGate}}
-          </li>
-          <li>
-            Seat Assignment: {{seatAssignment}}
-          </li>
-      {{/each}}
-    </ul>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2><i class="fas fa-plane-departure"></i>&nbsp; Airline Info</h2>
+      <ul>
+        {{#each airline}}
+        <li>
+          Airline: {{airlineName}}
+        </li>
+        <li>
+          Boarding Time: {{boardingTime}}
+        </li>
+        <li>
+          Departure Gate: {{departureGate}}
+        </li>
+        <li>
+          Seat Assignment: {{seatAssignment}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h2><i class="fas fa-hotel"></i>&nbsp; Hotel Info</h2>
-    <ul>
-      {{#each hotel}}
-          <li>
-            {{this.name}}
-          </li>
-          <li>
-            {{this.address}}
-          </li>
-          <li>
-            {{this.checkin}}
-          </li>
-          <li>
-            {{this.checkout}}
-          </li>
-      {{/each}}
-    </ul>
+  <hr>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2><i class="fas fa-hotel"></i>&nbsp; Hotel Info</h2>
+      <ul>
+        {{#each hotel}}
+        <li>
+          {{this.name}}
+        </li>
+        <li>
+          {{this.address}}
+        </li>
+        <li>
+          {{this.checkin}}
+        </li>
+        <li>
+          {{this.checkout}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h4>You've got mail!</h4>
+        <p>We've got you covered. We've sent a copy of this page to your email!</p>
+      </div>
+    </div>
 </div>
-
-</div> 
