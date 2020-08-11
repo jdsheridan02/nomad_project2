@@ -4,7 +4,7 @@ const db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function (app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -12,14 +12,6 @@ module.exports = function(app) {
     }
     res.render("./signup");
   });
-
-  // app.get("/login", (req, res) => {
-  //   // If the user already has an account send them to the user page
-  //   // if (req.user) {
-  //   //   res.redirect("/login");
-  //   // }
-  //   res.render("./login");
-  // });
 
   app.get("/user", (req, res) => {
     // If the user already has an account send them to the user page
@@ -31,15 +23,22 @@ module.exports = function(app) {
 
 
   app.get("/index", (req, res) => {
-// 
     db.airline.findAll({
       include: [db.User]
     }).then(function (dbAirline) {
-      res.render("./index", {airline: dbAirline});
-      });
-  });  
-//   res.render("./index");
-// });
+      res.render("./index", { airline: dbAirline });
+    });
+  });
+  //   res.render("./index");
+  // });
+
+  app.get("/index", (req, res) => {
+    db.hotel.findAll({
+      include: [db.User]
+    }).then(function (dbHotel) {
+      res.render("./index", { hotel: dbHotel });
+    });
+  });
 
   // Here we've user our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page

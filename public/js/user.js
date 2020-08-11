@@ -24,7 +24,7 @@ $(document).ready(function () {
     };
 
     // send an AJAX POST-request with jQuery
-    $.post("/api/airline", airlineEntry)
+    $.post("/api/index", airlineEntry)
       // on success, run this callback
       .then(function(data) {
         // log the data we found
